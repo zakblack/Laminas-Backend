@@ -28,13 +28,23 @@ return [
                     ],
                 ],
             ],
-            'application' => [
+            'user' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/application[/:action]',
+                    'route'    => '/user[/:action]',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'index',
+                    ],
+                ],
+            ],
+            'login' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/login',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'login',
                     ],
                 ],
             ],

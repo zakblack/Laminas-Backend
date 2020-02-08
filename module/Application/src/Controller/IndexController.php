@@ -99,7 +99,7 @@ class IndexController extends AbstractActionController
             $user->setUsername($username);
             $user->setPassword($password);
             $user->setNom($nom);
-            $user->setPrenom($nom);
+            $user->setPrenom($prenom);
             $user->setEmail($email);
             $user->setDateDeNaissance($datedenaissance);
             $user->setPoints(0);
@@ -114,6 +114,13 @@ class IndexController extends AbstractActionController
         }
 
 
+    }
+
+    public function verifyAction(){
+        $msg = $this->getRequest()->getHeaders();
+
+        return new JsonModel([var_dump($msg->get('authorization')->value)]);
+        //return new JsonModel([$msg->authorization()]);
     }
 
 }
