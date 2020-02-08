@@ -13,6 +13,7 @@ namespace Application\Controller;
 
 use Application\Entity\User;
 use Doctrine\ORM\EntityManager;
+use Firebase\JWT\JWT;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
@@ -36,6 +37,7 @@ class IndexController extends AbstractActionController
     // Posts page containing the recent blog posts.
     public function indexAction()
     {
+
         // Get recent posts
         $posts = $this->entityManager->getRepository(User::class)->findAll();
         $joueurs=[];
@@ -57,9 +59,61 @@ class IndexController extends AbstractActionController
 
     public function loginAction()
     {
-        $getVar = $this->params()->fromPost('abc');
-        $a=array("abc"=> $getVar);
-        return new JsonModel($a);
+        $username = $this->params()->fromPost("username");
+        $password =  $this->params()->fromPost("password");
+        $player = $this->entityManager->getRepository(User::class)->findOneBy(["username"=>$username,"password"=>$password]);
+        if (isset($player)) {
+            $key = "123456";
+            $payload = array(
+                "id" => $player->getId(),
+                "time" => time(),
+                "username" => $player->getUsername()
+            );
+            $token = JWT::encode($payload, $key);
+            $this->getResponse()->setStatusCode(200);
+            return new JsonModel(["message"=>"success","token"=>$token]);
+
+        }
+        else {
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+        }
+
+    }
+
+    public function registerAction(){
+
+        $username = $this->params()->fromPost("username");
+        $password =  $this->params()->fromPost("password");
+        $nom = $this->params()->fromPost("nom");
+        $prenom = $this->params()->fromPost("prenom");
+        $email =  $this->params()->fromPost("email");
+        $datedenaissance = $this->params()->fromPost("date_de_naissance");
+        $image = $this->params()->fromFiles("image");
+        if ($username == null or $password==null) {
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+        } else {
+            $user = new User();
+
+            $user->setUsername($username);
+            $user->setPassword($password);
+            $user->setNom($nom);
+            $user->setPrenom($nom);
+            $user->setEmail($email);
+            $user->setDateDeNaissance($datedenaissance);
+            $user->setPoints(0);
+            $user->setPartiesPerdues(0);
+            $user->setPartiesGagnees(0);
+            $user->setPourcentageReussite(0);
+            $this->entityManager->persist($user);
+            $this->entityManager->flush();
+
+            $this->getResponse()->setStatusCode(200);
+            return new JsonModel(["message"=>"success","id"=>$user->getId()]);
+        }
+
+
     }
 
 }
