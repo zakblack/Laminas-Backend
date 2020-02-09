@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * This class represents a single post in a blog.
-@ORM\Entity
+ * @ORM\Entity
  * @ORM\Table(name="jouer")
  */
 class Game
@@ -13,227 +13,151 @@ class Game
 
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(name="id_u")
+     * @ORM\Column(name="id_u1")
      */
-    protected $id;
+    protected $id_u1;
 
     /**
-     * @ORM\Column(name="username")
+     * @ORM\Id
+     * @ORM\Column(name="id_u2")
      */
-    protected $username;
+    protected $id_u2;
 
     /**
-     * @ORM\Column(name="email")
+     * @ORM\Column(name="room")
      */
-    protected $email;
+    protected $room;
 
     /**
-     * @ORM\Column(name="password")
+     * @ORM\Column(name="nombre_u1")
      */
-    protected $password;
+    protected $nombre_u1;
 
     /**
-     * @ORM\Column(name="prenom")
+     * @ORM\Column(name="nombre_u2")
      */
-    protected $prenom;
+    protected $nombre_u2;
 
     /**
-     * @ORM\Column(name="nom")
+     * @ORM\Column(name="date_et_heure")
      */
-    protected $nom;
+    protected $date_et_heure;
 
     /**
-     * @ORM\Column(name="date_de_naissance")
+     * @ORM\Column(name="nombre_de_tours")
      */
-    protected $date_de_naissance;
+    protected $nombre_de_tours;
 
     /**
-     * @ORM\Column(name="image")
+     * @return mixed
      */
-    protected $image;
+    public function getIdU1()
+    {
+        return $this->id_u1;
+    }
 
     /**
-     * @ORM\Column(name="points")
+     * @param mixed $id_u1
      */
-    protected $points;
+    public function setIdU1($id_u1): void
+    {
+        $this->id_u1 = $id_u1;
+    }
 
     /**
-     * @ORM\Column(name="parties_gagnees")
+     * @return mixed
      */
-    protected $parties_gagnees;
-
+    public function getIdU2()
+    {
+        return $this->id_u2;
+    }
 
     /**
-     * @ORM\Column(name="parties_perdues")
+     * @param mixed $id_u2
      */
-    protected $parties_perdues;
-
+    public function setIdU2($id_u2): void
+    {
+        $this->id_u2 = $id_u2;
+    }
 
     /**
-     * @ORM\Column(name="etat")
+     * @return mixed
      */
-    protected $etat;
-
+    public function getRoom()
+    {
+        return $this->room;
+    }
 
     /**
-     * @ORM\Column(name="pourcentage_reussite")
+     * @param mixed $room
      */
-    protected $pourcentage_reussite;
-
-
-    public function getId()
+    public function setRoom($room): void
     {
-        return $this->id;
+        $this->room = $room;
     }
 
-
-    public function setId($id): void
+    /**
+     * @return mixed
+     */
+    public function getNombreU1()
     {
-        $this->id = $id;
+        return $this->nombre_u1;
     }
 
-
-    public function getUsername()
+    /**
+     * @param mixed $nombre_u1
+     */
+    public function setNombreU1($nombre_u1): void
     {
-        return $this->username;
+        $this->nombre_u1 = $nombre_u1;
     }
 
-
-    public function setUsername($username): void
+    /**
+     * @return mixed
+     */
+    public function getNombreU2()
     {
-        $this->username = $username;
+        return $this->nombre_u2;
     }
 
-
-    public function getEmail()
+    /**
+     * @param mixed $nombre_u2
+     */
+    public function setNombreU2($nombre_u2): void
     {
-        return $this->email;
+        $this->nombre_u2 = $nombre_u2;
     }
 
-
-    public function setEmail($email): void
+    /**
+     * @return mixed
+     */
+    public function getDateEtHeure()
     {
-        $this->email = $email;
+        return $this->date_et_heure;
     }
 
-
-    public function getPassword()
+    /**
+     * @param mixed $date_et_heure
+     */
+    public function setDateEtHeure($date_et_heure): void
     {
-        return $this->password;
+        $this->date_et_heure = $date_et_heure;
     }
 
-
-    public function setPassword($password): void
+    /**
+     * @return mixed
+     */
+    public function getNombreDeTours()
     {
-        $this->password = $password;
+        return $this->nombre_de_tours;
     }
 
-
-    public function getPrenom()
+    /**
+     * @param mixed $nombre_de_tours
+     */
+    public function setNombreDeTours($nombre_de_tours): void
     {
-        return $this->prenom;
-    }
-
-
-    public function setPrenom($prenom): void
-    {
-        $this->prenom = $prenom;
-    }
-
-
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-
-    public function setNom($nom): void
-    {
-        $this->nom = $nom;
-    }
-
-
-    public function getDateDeNaissance()
-    {
-        return $this->date_de_naissance;
-    }
-
-
-    public function setDateDeNaissance($date_de_naissance): void
-    {
-        $this->date_de_naissance = $date_de_naissance;
-    }
-
-
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-
-    public function setImage($image): void
-    {
-        $this->image = $image;
-    }
-
-    public function getPoints()
-    {
-        return $this->points;
-    }
-
-
-    public function setPoints($points): void
-    {
-        $this->points = $points;
-    }
-
-
-    public function getPartiesGagnees()
-    {
-        return $this->parties_gagnees;
-    }
-
-
-    public function setPartiesGagnees($parties_gagnees): void
-    {
-        $this->parties_gagnees = $parties_gagnees;
-    }
-
-
-    public function getPartiesPerdues()
-    {
-        return $this->parties_perdues;
-    }
-
-
-    public function setPartiesPerdues($parties_perdues): void
-    {
-        $this->parties_perdues = $parties_perdues;
-    }
-
-
-    public function getEtat()
-    {
-        return $this->etat;
-    }
-
-
-    public function setEtat($etat): void
-    {
-        $this->etat = $etat;
-    }
-
-
-    public function getPourcentageReussite()
-    {
-        return $this->pourcentage_reussite;
-    }
-
-
-    public function setPourcentageReussite($pourcentage_reussite): void
-    {
-        $this->pourcentage_reussite = $pourcentage_reussite;
+        $this->nombre_de_tours = $nombre_de_tours;
     }
 
 

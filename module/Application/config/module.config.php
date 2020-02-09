@@ -41,6 +41,16 @@ return [
                     ],
                 ],
             ],
+            'jouer' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/jouer[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\GameController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
             'login' => [
                 'type'    => Literal::class,
                 'options' => [
@@ -71,6 +81,8 @@ return [
                             Controller\Factory\UsersControllerFactory::class,
             Controller\JwtController::class =>
                             Controller\Factory\JwtServiceFactory::class,
+            Controller\GameController::class =>
+                            Controller\Factory\GameControllerFactory::class,
         ],
     ],
     'view_manager' => [
