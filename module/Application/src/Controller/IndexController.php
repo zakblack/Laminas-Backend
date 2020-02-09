@@ -63,13 +63,15 @@ class IndexController extends AbstractActionController
         $password =  $this->params()->fromPost("password");
         $player = $this->entityManager->getRepository(User::class)->findOneBy(["username"=>$username,"password"=>$password]);
         if (isset($player)) {
-            $key = "123456";
+            /**$key = "123456";
             $payload = array(
                 "id" => $player->getId(),
                 "time" => time(),
                 "username" => $player->getUsername()
             );
-            $token = JWT::encode($payload, $key);
+            $token = JWT::encode($payload, $key);**/
+
+            $token = JwtController::generateJwt($player);
             $this->getResponse()->setStatusCode(200);
             return new JsonModel(["message"=>"success","token"=>$token]);
 

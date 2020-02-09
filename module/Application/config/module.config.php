@@ -10,6 +10,9 @@ declare(strict_types=1);
 
 namespace Application;
 
+
+
+
 use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
@@ -28,23 +31,33 @@ return [
                     ],
                 ],
             ],
-            'user' => [
+            'users' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/user[/:action]',
+                    'route'    => '/users[/:action]',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => Controller\UsersController::class,
                         'action'     => 'index',
                     ],
                 ],
             ],
             'login' => [
-                'type'    => Segment::class,
+                'type'    => Literal::class,
                 'options' => [
                     'route'    => '/login',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'login',
+                    ],
+                ],
+            ],
+            'register' => [
+                'type'    => Literal::class,
+                'options' => [
+                    'route'    => '/register',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'register',
                     ],
                 ],
             ],
@@ -54,6 +67,10 @@ return [
         'factories' => [
             Controller\IndexController::class =>
                             Controller\Factory\IndexControllerFactory::class,
+            Controller\UsersController::class =>
+                            Controller\Factory\UsersControllerFactory::class,
+            Controller\JwtController::class =>
+                            Controller\Factory\JwtServiceFactory::class,
         ],
     ],
     'view_manager' => [

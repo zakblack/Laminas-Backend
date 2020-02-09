@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/autoload/jwt.local.php.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/Factory/JwtServiceFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/Factory/UsersControllerFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/JwtController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/IndexController.php" afterDir="false" />
     </list>
@@ -76,7 +82,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1XUDtgVPejdegwCryY2TXRmjJqU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -86,6 +94,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/autoload" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\api\abc\config\autoload" />
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Service" />
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Factory" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -109,22 +128,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581091996092</updated>
-      <workItem from="1581092002543" duration="27183000" />
+      <workItem from="1581092002543" duration="40717000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding multiple routes to make Moussa happy">
+      <created>1581198545084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581198545084</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding multiple routes to make Moussa happy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding multiple routes to make Moussa happy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581101547326">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1581101547326" />
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581198541703">
+    <state x="423" y="173" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581241535982">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581198541703" />
+    <state x="423" y="173" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1581241535982" />
+    <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581242589418">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242589418" />
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581198677275">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581198677275" />
+    <state x="453" y="184" key="NewPhpClassDialog" timestamp="1581242713943">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="453" y="184" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242713943" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1581101646292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
