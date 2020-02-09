@@ -60,6 +60,7 @@ class GameController extends AbstractActionController
                 $game->setNombreU1($nombreu1);
                 $game->setNombreU2($nombreu2);
                 $game->setDateEtHeure($dateetheure);
+                $game->setNombreDeTours(0);
                 $this->entityManager->persist($game);
                 $this->entityManager->flush();
                 $this->getResponse()->setStatusCode(200);
@@ -80,7 +81,112 @@ class GameController extends AbstractActionController
         }
     }
 
+    public function getAction()
+    {
+        if ($this->verify($this->getRequest())){
+            if($this->getRequest()->isGet()){
+                $room=$this->params()->fromQuery("room");
+                $game = $this->entityManager->getRepository(Game::class)->findOneBy(["room"=>$room]);
+                if (isset($game)){
+                    $jouer=array("id_u1"=>$game->getIdU1(),
+                        "id_u2"=>$game->getIdU2(),
+                        "room"=>$game->getRoom(),
+                        "nombre_u1"=>$game->getNombreU1(),
+                        "nombre_u2"=>$game->getNombreU2(),
+                        "date_et_heure"=>$game->getDateEtHeure(),
+                        "nombre_de_tours"=>$game->getNombreDeTours()
+                    );
 
+                    $this->getResponse()->setStatusCode(200);
+                    return new JsonModel($jouer);
+                }
+                else {
+                    $this->getResponse()->setStatusCode(401);
+                    return new JsonModel(["message"=>"Unauthorized"]);
+                }
+
+            }
+
+            else {
+                $this->getResponse()->setStatusCode(401);
+                return new JsonModel(["message"=>"Unauthorized"]);
+            }
+
+        }
+        else {
+
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+
+        }
+    }
+
+    public function addTourAction()
+    {
+        if ($this->verify($this->getRequest())){
+            if($this->getRequest()->isPut()){
+                $room=$this->params()->fromQuery("room");
+                $game = $this->entityManager->getRepository(Game::class)->findOneBy(["room"=>$room]);
+                if (isset($game)){
+                    $nbr=$game->getNombreDeTours();
+                    $game->setNombreDeTours($nbr+1);
+                    $this->entityManager->flush();
+                    $this->getResponse()->setStatusCode(200);
+                    return new JsonModel(["ok"]);
+                }
+                else {
+                    $this->getResponse()->setStatusCode(401);
+                    return new JsonModel(["message"=>"Room not found"]);
+                }
+
+            }
+
+            else {
+                $this->getResponse()->setStatusCode(401);
+                return new JsonModel(["message"=>"Unauthorized"]);
+            }
+
+        }
+        else {
+
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+
+        }
+    }
+
+    public function endAction(){
+        if ($this->verify($this->getRequest())){
+            if($this->getRequest()->isDelete()){
+
+                $roomid=$this->params()->fromQuery("room");
+
+                    $room = $this->entityManager->getRepository(Game::class)->find($roomid);
+                    if (isset($room)){
+                        $this->entityManager->remove($room);
+                        $this->entityManager->flush();
+                        return new JsonModel([$room->getIdRoom()]);
+                    }
+                    else {
+                        $this->getResponse()->setStatusCode(401);
+                        return new JsonModel(["Game not found"]);
+                    }
+
+
+                }
+            else {
+                $this->getResponse()->setStatusCode(401);
+                return new JsonModel(["message"=>"Unauthorized"]);
+            }
+
+        }
+        else {
+
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+
+        }
+    }
 
     private function getID($request){
         $msg = $request->getHeaders()->get('authorization')->getFieldValue();
@@ -95,6 +201,7 @@ class GameController extends AbstractActionController
 
 
     private function verify($request){
+
         $msg = $request->getHeaders()->get('authorization')->getFieldValue();
         $key = "123456";
         $msg = str_replace("Bearer ", "", $msg);

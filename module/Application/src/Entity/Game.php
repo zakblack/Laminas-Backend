@@ -12,13 +12,17 @@ class Game
 {
 
     /**
-     * @ORM\Id
      * @ORM\Column(name="id_u1")
      */
     protected $id_u1;
 
     /**
      * @ORM\Id
+     * @ORM\Column(name="id_room")
+     */
+    protected $id_room;
+
+    /**
      * @ORM\Column(name="id_u2")
      */
     protected $id_u2;
@@ -158,6 +162,22 @@ class Game
     public function setNombreDeTours($nombre_de_tours): void
     {
         $this->nombre_de_tours = $nombre_de_tours;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdRoom()
+    {
+        return $this->id_room;
+    }
+
+    /**
+     * @param mixed $id_room
+     */
+    public function setIdRoom($id_room): void
+    {
+        $this->id_room = $id_room;
     }
 
 

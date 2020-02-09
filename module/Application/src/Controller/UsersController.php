@@ -94,6 +94,7 @@ class UsersController extends AbstractActionController
                         "username"=>$player->getUsername(),
                         "email"=>$player->getEmail(),
                         "nom"=>$player->getNom(),
+                        "password"=>$player->getPassword(),
                         "prenom"=>$player->getPrenom(),
                         "date_de_naissance"=>$player->getDateDeNaissance(),
                         "image"=>$player->getImage(),
@@ -135,7 +136,7 @@ class UsersController extends AbstractActionController
                 if ($id_player == $this->getID($this->getRequest())) {
                     $user = $this->entityManager->getRepository(User::class)->find($id_player);
                     $user->setUsername($this->params()->fromQuery("username"));
-                   // $user->setPassword($this->params()->fromQuery("password"));
+                    $user->setPassword($this->params()->fromQuery("password"));
                     $user->setNom($this->params()->fromQuery("nom"));
                     $user->setPrenom($this->params()->fromQuery("prenom"));
                     $user->setEmail($this->params()->fromQuery("email"));
