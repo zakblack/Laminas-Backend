@@ -62,12 +62,12 @@ return [
                 ],
             ],
             'register' => [
-                'type'    => Literal::class,
+                'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/register',
+                    'route'    => '/register[/:action]',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action'     => 'register',
+                        'controller' => Controller\RegisterController::class,
+                        'action'     => 'index',
                     ],
                 ],
             ],
@@ -83,6 +83,8 @@ return [
                             Controller\Factory\JwtServiceFactory::class,
             Controller\GameController::class =>
                             Controller\Factory\GameControllerFactory::class,
+            Controller\Factory\RegisterControllerFactory::class=>
+                            Controller\RegisterController::class,
         ],
     ],
     'view_manager' => [
