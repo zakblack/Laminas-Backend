@@ -194,7 +194,7 @@ class GameController extends AbstractActionController
         $var=JwtController::deconstructJwt($msg);
         $var=json_encode($var);
         $var=json_decode($var);
-        $var=(int) $var->payload->id;
+        $var=(int) $var->payload->id_u;
         return $var;
     }
 
