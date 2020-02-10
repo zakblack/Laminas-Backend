@@ -19,7 +19,7 @@ use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
 
 
-class IndexController extends AbstractActionController
+class RegisterController extends AbstractActionController
 {
     /**
      * Entity manager.
