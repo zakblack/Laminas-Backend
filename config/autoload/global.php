@@ -8,7 +8,7 @@ return [
                 'driverClass' => PDOMySqlDriver::class,
                 'params' => [
                     'host'     => 'localhost',
-                    'user'     => 'roffot',
+                    'user'     => 'root',
                     'password' => '',
                     'dbname'   => 'project',
                 ]

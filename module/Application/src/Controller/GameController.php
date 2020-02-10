@@ -102,7 +102,7 @@ class GameController extends AbstractActionController
                 }
                 else {
                     $this->getResponse()->setStatusCode(401);
-                    return new JsonModel(["message"=>"Unauthorized"]);
+                    return new JsonModel(["message"=>"Room not found"]);
                 }
 
             }
@@ -203,7 +203,7 @@ class GameController extends AbstractActionController
     private function verify($request){
 
         $msg = $request->getHeaders()->get('authorization')->getFieldValue();
-        $key = "123456";
+
         $msg = str_replace("Bearer ", "", $msg);
         return JwtController::verifyJwt($msg);
     }
