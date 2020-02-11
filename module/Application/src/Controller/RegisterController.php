@@ -40,7 +40,8 @@ class RegisterController extends AbstractActionController
 
     public function indexAction(){
 
-       /** $username = $this->params()->fromPost("username");
+        if($this->getRequest()->isGet()){
+        $username = $this->params()->fromPost("username");
         $password =  $this->params()->fromPost("password");
         $nom = $this->params()->fromPost("nom");
         $prenom = $this->params()->fromPost("prenom");
@@ -62,9 +63,15 @@ class RegisterController extends AbstractActionController
             $this->entityManager->persist($user);
             $this->entityManager->flush();
 
-            $this->getResponse()->setStatusCode(200);**/
+            $this->getResponse()->setStatusCode(200);
             return new JsonModel(["message"=>"success"]);
 
+
+
+    } else {
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+        }
 
 
     }
