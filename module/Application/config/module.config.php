@@ -71,6 +71,16 @@ return [
                     ],
                 ],
             ],
+            'historique_jeu' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/historique_jeu[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\GameHistoryController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
@@ -85,6 +95,8 @@ return [
                             Controller\Factory\GameControllerFactory::class,
             Controller\RegisterController::class=>
                             Controller\Factory\RegisterControllerFactory::class,
+            Controller\GameHistoryController::class=>
+                            Controller\Factory\GameHistoryControllerFactory::class,
         ],
     ],
     'view_manager' => [

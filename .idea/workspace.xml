@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="">
+    <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="Always making Moussa happy &#10;like always">
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/Factory/GameHistoryControllerFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/GameHistoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Entity/GameHistory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Entity/Game.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,14 +96,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/module/Application/src/Controller" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Factory" />
       <recent name="C:\wamp64\www\api\abc\config\autoload" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Service" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -124,7 +130,7 @@
       <updated>1581091996092</updated>
       <workItem from="1581092002543" duration="49731000" />
       <workItem from="1581337552618" duration="4832000" />
-      <workItem from="1581432507510" duration="679000" />
+      <workItem from="1581432507510" duration="4740000" />
     </task>
     <task id="LOCAL-00001" summary="Adding multiple routes to make Moussa happy">
       <created>1581198545084</created>
@@ -189,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581432957918</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Always making Moussa happy &#10;like always">
+      <created>1581433411859</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581433411859</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,26 +224,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="423" y="173" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1581241535982" />
-    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1581266362300">
+    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1581434853871">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1581266362300" />
+    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1581434853871" />
     <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581242589418">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242589418" />
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581265391132">
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581435357706">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581265391132" />
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581432954366">
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581435357706" />
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581434685319">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581432954366" />
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581434685319" />
     <state x="453" y="184" key="NewPhpClassDialog" timestamp="1581242713943">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="453" y="184" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242713943" />
+    <state x="517" y="293" key="NewPhpFileDialog" timestamp="1581434574556">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="517" y="293" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1581434574556" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1581101646292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

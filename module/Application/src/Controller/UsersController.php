@@ -217,10 +217,18 @@ class UsersController extends AbstractActionController
 
 
     private function verify($request){
-        $msg = $request->getHeaders()->get('authorization')->getFieldValue();
-        $key = "123456";
-        $msg = str_replace("Bearer ", "", $msg);
-        return JwtController::verifyJwt($msg);
+        $requete = $request->getHeaders()->get('authorization');
+
+        if ($requete == null){
+
+            return false;
+        }
+        else {
+            $msg = $request->getHeaders()->get('authorization')->getFieldValue();
+            $msg = str_replace("Bearer ", "", $msg);
+            return JwtController::verifyJwt($msg);
+        }
+
     }
 
 }

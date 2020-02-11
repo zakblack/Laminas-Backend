@@ -19,7 +19,7 @@ class Game
 
 
     /**
-     * *@ORM\Id
+     * @ORM\Id
      * @ORM\Column(name="id_u2")
      */
     protected $id_u2;

@@ -76,6 +76,52 @@ class RegisterController extends AbstractActionController
 
     }
 
+    public function emailAction(){
+        $email = $this->params()->fromQuery("email");
+        $player = $this->entityManager->getRepository(User::class)->findOneBy(["email"=>$email]);
+        if (isset($player)) {
+            /**$key = "123456";
+            $payload = array(
+            "id" => $player->getId(),
+            "time" => time(),
+            "username" => $player->getUsername()
+            );
+            $token = JWT::encode($payload, $key);**/
+
+
+            $this->getResponse()->setStatusCode(200);
+            return new JsonModel(["error"=>"1"]);
+
+        }
+        else {
+            $this->getResponse()->setStatusCode(200);
+            return new JsonModel(["error"=>"0"]);
+        }
+    }
+
+    public function usernameAction(){
+        $username = $this->params()->fromQuery("username");
+        $player = $this->entityManager->getRepository(User::class)->findOneBy(["username"=>$username]);
+        if (isset($player)) {
+            /**$key = "123456";
+            $payload = array(
+            "id" => $player->getId(),
+            "time" => time(),
+            "username" => $player->getUsername()
+            );
+            $token = JWT::encode($payload, $key);**/
+
+
+            $this->getResponse()->setStatusCode(200);
+            return new JsonModel(["error"=>"1"]);
+
+        }
+        else {
+            $this->getResponse()->setStatusCode(200);
+            return new JsonModel(["error"=>"0"]);
+        }
+    }
+
 
 
 }
