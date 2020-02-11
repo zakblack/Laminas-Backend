@@ -83,8 +83,8 @@ return [
                             Controller\Factory\JwtServiceFactory::class,
             Controller\GameController::class =>
                             Controller\Factory\GameControllerFactory::class,
-            Controller\Factory\RegisterControllerFactory::class=>
-                            Controller\RegisterController::class,
+            Controller\RegisterController::class=>
+                            Controller\Factory\RegisterControllerFactory::class,
         ],
     ],
     'view_manager' => [
