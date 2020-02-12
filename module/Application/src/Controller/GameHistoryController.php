@@ -120,7 +120,7 @@ class GameHistoryController extends AbstractActionController
 
     public function deleteAction(){
 
-            if($this->getRequest()->isDelete()){
+            if($this->getRequest()->isGet()){
                 if ($this->verify($this->getRequest())){
                     $id_j=$this->params()->fromQuery("id_j");
 

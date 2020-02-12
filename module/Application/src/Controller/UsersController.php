@@ -130,21 +130,21 @@ class UsersController extends AbstractActionController
 
     public function editAction(){
         if ($this->verify($this->getRequest())){
-            if($this->getRequest()->isPut()){
+            if($this->getRequest()->isPost()){
 
-                $id_player=$this->params()->fromQuery("id");
+                $id_player=$this->params()->fromPost("id");
                 if ($id_player == $this->getID($this->getRequest())) {
                     $user = $this->entityManager->getRepository(User::class)->find($id_player);
-                    $user->setUsername($this->params()->fromQuery("username"));
-                    $user->setPassword($this->params()->fromQuery("password"));
-                    $user->setNom($this->params()->fromQuery("nom"));
-                    $user->setPrenom($this->params()->fromQuery("prenom"));
-                    $user->setEmail($this->params()->fromQuery("email"));
-                    $user->setDateDeNaissance($this->params()->fromQuery("date_de_naissance"));
-                    $user->setPoints($this->params()->fromQuery("image"));
-                    $user->setPartiesPerdues($this->params()->fromQuery("parties_perdues"));
-                    $user->setPartiesGagnees($this->params()->fromQuery("parties_gagnees"));
-                    $user->setPourcentageReussite($this->params()->fromQuery("pourcentage_reussite"));
+                    $user->setUsername($this->params()->fromPost("username"));
+                    $user->setPassword($this->params()->fromPost("password"));
+                    $user->setNom($this->params()->fromPost("nom"));
+                    $user->setPrenom($this->params()->fromPost("prenom"));
+                    $user->setEmail($this->params()->fromPost("email"));
+                    $user->setDateDeNaissance($this->params()->fromPost("date_de_naissance"));
+                    $user->setPoints($this->params()->fromPost("image"));
+                    $user->setPartiesPerdues($this->params()->fromPost("parties_perdues"));
+                    $user->setPartiesGagnees($this->params()->fromPost("parties_gagnees"));
+                    $user->setPourcentageReussite($this->params()->fromPost("pourcentage_reussite"));
                     $this->entityManager->flush();
                     return new JsonModel([$user->getUsername()]);
                 }
@@ -168,7 +168,7 @@ class UsersController extends AbstractActionController
     }
     public function deleteAction(){
         if ($this->verify($this->getRequest())){
-            if($this->getRequest()->isDelete()){
+            if($this->getRequest()->isGet()){
 
                 $id_player=$this->params()->fromQuery("id");
                 if ($id_player == $this->getID($this->getRequest())) {

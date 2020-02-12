@@ -61,6 +61,16 @@ return [
                     ],
                 ],
             ],
+            'logout' => [
+                'type'    => Literal::class,
+                'options' => [
+                    'route'    => '/logout',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'logout',
+                    ],
+                ],
+            ],
             'register' => [
                 'type'    => Segment::class,
                 'options' => [

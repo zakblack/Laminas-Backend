@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/ConnectionLogController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Application/src/Controller/Factory/ConnectionLogControllerFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Application/src/Entity/ConnectionLog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/ConnectionLogController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/Factory/ConnectionLogControllerFactory.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/GameHistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/GameHistoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +131,7 @@
       <workItem from="1581092002543" duration="49731000" />
       <workItem from="1581337552618" duration="4832000" />
       <workItem from="1581432507510" duration="7865000" />
+      <workItem from="1581533856961" duration="4872000" />
     </task>
     <task id="LOCAL-00001" summary="Adding multiple routes to make Moussa happy">
       <created>1581198545084</created>
@@ -207,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581437303490</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Always making Moussa happy &#10;like always">
+      <created>1581534051332</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581534051332</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,14 +247,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242589418" />
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581435357706">
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581538130703">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581435357706" />
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581437300427">
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581538130703" />
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581534047319">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581437300427" />
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581534047319" />
     <state x="453" y="184" key="NewPhpClassDialog" timestamp="1581242713943">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -253,6 +263,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="517" y="293" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1581434574556" />
+    <state x="275" y="103" key="Vcs.Push.Dialog.v2" timestamp="1581534061533">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581534061533" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1581101646292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace Application\Controller;
 
 
+use Application\Entity\ConnectionLog;
 use Application\Entity\User;
 use Doctrine\ORM\EntityManager;
 use Firebase\JWT\JWT;
@@ -70,7 +71,11 @@ class IndexController extends AbstractActionController
                 "username" => $player->getUsername()
             );
             $token = JWT::encode($payload, $key);**/
-
+            $connexion = new ConnectionLog();
+            $connexion->setIdU($player->getId());
+            $connexion->setConnexion(date("Y-m-d H:i:s"));
+            $this->entityManager->persist($connexion);
+            $this->entityManager->flush();
             $token = JwtController::generateJwt($player);
             $this->getResponse()->setStatusCode(200);
             return new JsonModel(["message"=>"success","token"=>$token]);
@@ -83,6 +88,36 @@ class IndexController extends AbstractActionController
 
     }
 
+
+    public function logoutAction()
+    {
+        if ($this->verify($this->getRequest())){
+
+        $id_u =  $this->params()->fromQuery("id_u");
+        $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findOneBy(["id_u"=>$id_u]);
+        if (isset($connexion)) {
+
+            $connexion->setDeconnexion(date("Y-m-d H:i:s"));
+            $this->entityManager->flush();
+            $this->getResponse()->setStatusCode(200);
+            return new JsonModel(["message"=>"success"]);
+
+        }
+        else {
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+        }
+
+        }
+        else {
+
+            $this->getResponse()->setStatusCode(403);
+            return new JsonModel(["message"=>"Forbidden"]);
+
+        }
+
+    }
+/**
     public function registerAction(){
 
         $username = $this->params()->fromPost("username");
@@ -112,7 +147,7 @@ class IndexController extends AbstractActionController
 
 
 
-    }
+    }**/
 
     public function verifyAction(){
         $msg = $this->getRequest()->getHeaders();
