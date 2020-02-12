@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace Application\Controller;
 
 
-use Application\Entity\Game;
+
 use Application\Entity\GameHistory;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\OptimisticLockException;
@@ -21,7 +21,7 @@ use Laminas\View\Model\JsonModel;
 use Laminas\View\Model\ViewModel;
 
 
-class GameHistoryController extends AbstractActionController
+class ConnectionLogController extends AbstractActionController
 {
     /**
      * Entity manager.
