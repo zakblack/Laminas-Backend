@@ -39,15 +39,8 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
 
-        // Get recent posts
-        $posts = $this->entityManager->getRepository(User::class)->findAll();
-        $joueurs=[];
-        foreach ($posts as $p ){
-            $joueur=array("id"=>$p->getId(),"username"=>$p->getUsername());
-            array_push($joueurs, $joueur);
-        }
 
-        return new JsonModel($joueurs);
+        return new JsonModel(["Welcome"=>"Laminas backend deployed by Zakaria GHARIB"]);
         /**return new JsonModel([
             'status' => 'SUCCESS',
             'message'=>'Here is your data',
