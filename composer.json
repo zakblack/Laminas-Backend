@@ -20,7 +20,8 @@
         "laminas/laminas-hydrator": "2.4.2",
         "doctrine/doctrine-orm-module": "^2.1",
         "firebase/php-jwt": "^5.0",
-      "ext-json": "*"
+      "ext-json": "*",
+        "laminas/laminas-session": "^2.9"
     },
     "autoload": {
         "psr-4": {

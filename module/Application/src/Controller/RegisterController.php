@@ -40,7 +40,7 @@ class RegisterController extends AbstractActionController
 
     public function indexAction(){
 
-        if($this->getRequest()->isGet()){
+        if($this->getRequest()->isPost()){
         $username = $this->params()->fromPost("username");
         $password =  $this->params()->fromPost("password");
         $nom = $this->params()->fromPost("nom");

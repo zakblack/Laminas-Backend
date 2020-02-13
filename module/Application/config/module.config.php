@@ -13,6 +13,7 @@ namespace Application;
 
 
 
+use Application\Controller\AdminController;
 use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
@@ -37,6 +38,16 @@ return [
                     'route'    => '/users[/:action]',
                     'defaults' => [
                         'controller' => Controller\UsersController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
+            'admin' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/admin[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\AdminController::class,
                         'action'     => 'index',
                     ],
                 ],
@@ -93,6 +104,9 @@ return [
             ],
         ],
     ],
+    'session_containers' => [
+        'Administration'
+    ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class =>
@@ -107,6 +121,8 @@ return [
                             Controller\Factory\RegisterControllerFactory::class,
             Controller\GameHistoryController::class=>
                             Controller\Factory\GameHistoryControllerFactory::class,
+            Controller\AdminController::class=>
+                            Controller\Factory\AdminControllerFactory::class,
         ],
     ],
     'view_manager' => [
