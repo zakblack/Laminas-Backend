@@ -87,7 +87,9 @@ class IndexController extends AbstractActionController
     {
         if ($this->verify($this->getRequest())){
 
+
         $id_u =  $this->params()->fromQuery("id_u");
+            if ($id_u == $this->getID($this->getRequest())){
         $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findOneBy(array('id_u'=>$id_u),
             array('connexion' => 'DESC'));
         if (isset($connexion)) {
@@ -103,7 +105,11 @@ class IndexController extends AbstractActionController
         else {
             $this->getResponse()->setStatusCode(403);
             return new JsonModel(["message"=>"Forbidden"]);
-        }
+        }}
+            else{
+                $this->getResponse()->setStatusCode(403);
+                return new JsonModel(["message"=>"Forbidden"]);
+            }
 
         }
         else {
@@ -145,6 +151,17 @@ class IndexController extends AbstractActionController
 
 
     }**/
+
+    private function getID($request){
+        $msg = $request->getHeaders()->get('authorization')->getFieldValue();
+        $msg = str_replace("Bearer ", "", $msg);
+        $var=JwtController::deconstructJwt($msg);
+        $var=json_encode($var);
+        $var=json_decode($var);
+        $var=(int) $var->payload->id_u;
+        return $var;
+    }
+
 
     private function verify($request){
         $requete = $request->getHeaders()->get('authorization');

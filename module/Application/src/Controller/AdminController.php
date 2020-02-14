@@ -45,12 +45,15 @@ class AdminController extends AbstractActionController
     }
 
     public function profileAction()
-    {
-        if ($id = $this->params()->fromQuery("id") != null )
+    {   $admin = $this->authenticationService->getIdentity();
+        if ($admin) {
+
+        $id_u = $this->params()->fromQuery("id");
+        if ($id_u != null )
         {
-            $p = $this->entityManager->getRepository(User::class)->find($id);
-            $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findAll(["id_u"=>$id]);
-            $joueur=array("id_u"=>$p->getId(),
+            $p = $this->entityManager->getRepository(User::class)->findOneBy(["id"=>$id_u]);
+            $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findBy(["id_u"=>$id_u]);
+            $player=array("id_u"=>$p->getId(),
                 "username"=>$p->getUsername(),
                 "password"=>$p->getPassword(),
                 "nom"=>$p->getNom(),
@@ -64,15 +67,29 @@ class AdminController extends AbstractActionController
                 "etat"=>$p->getEtat(),
                 "pourcentage_reussite"=>$p->getPourcentageReussite()
             );
+
+            $connectionlog=[];
+            foreach ($connexion as $p ){
+                $co=array("id_u"=>$p->getIdU(),
+                    "id_c"=>$p->getIdC(),
+                    "connexion"=>$p->getConnexion(),
+                    "deconnexion"=>$p->getDeconnexion(),
+                );
+                array_push($connectionlog, $co);
+            }
             return new ViewModel([
-                "user"=>$joueur,
-                "connectionlog"=>$connexion
+                "user"=>$player,
+                "connectionlog"=>$connectionlog,
+                "test"=>$id_u
 
             ]);
         }
         else {
             $this->redirect()->toRoute('admin');
         }
+    } else {
+$this->redirect()->toRoute('admin');
+}
 
     }
 
