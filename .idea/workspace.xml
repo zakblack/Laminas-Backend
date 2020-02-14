@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/view/application/admin/home.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/view/application/admin/home.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/RegisterController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,7 @@
       <workItem from="1581432507510" duration="7865000" />
       <workItem from="1581533856961" duration="12065000" />
       <workItem from="1581612965506" duration="15104000" />
-      <workItem from="1581684548998" duration="8669000" />
+      <workItem from="1581684548998" duration="9035000" />
     </task>
     <task id="LOCAL-00001" summary="Adding multiple routes to make Moussa happy">
       <created>1581198545084</created>
