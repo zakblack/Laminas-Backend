@@ -46,8 +46,19 @@ class UsersController extends AbstractActionController
             $posts = $this->entityManager->getRepository(User::class)->findAll();
             $joueurs=[];
             foreach ($posts as $p ){
-                $joueur=array("id"=>$p->getId(),
-                    "username"=>$p->getUsername()
+                $joueur=array("id_u"=>$p->getId(),
+                    "username"=>$p->getUsername(),
+                    "password"=>$p->getPassword(),
+                    "nom"=>$p->getNom(),
+                    "prenom"=>$p->getPrenom(),
+                    "email"=>$p->getEmail(),
+                    "date_de_naissance"=>$p->getDateDeNaissance(),
+                    "image"=>$p->getImage(),
+                    "points"=>$p->getPoints(),
+                    "parties_gagnees"=>$p->getPartiesGagnees(),
+                    "parties_perdues"=>$p->getPartiesPerdues(),
+                    "etat"=>$p->getEtat(),
+                    "pourcentage_reussite"=>$p->getPourcentageReussite()
                 );
                 array_push($joueurs, $joueur);
             }
