@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/module/Application/view/application/admin/profile.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/JwtController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/JwtController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/view/application/admin/home.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/view/application/admin/home.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,19 +97,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/module/Application/src/Entity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/module/Application/view/application/admin" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\api\abc\module\Application\src\Service\Factory" />
-      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\api\abc\module\Application\view\application\admin" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Entity" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Factory" />
       <recent name="C:\wamp64\www\api\abc\config\autoload" />
-      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Service\Factory" />
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -135,7 +139,7 @@
       <workItem from="1581432507510" duration="7865000" />
       <workItem from="1581533856961" duration="12065000" />
       <workItem from="1581612965506" duration="15104000" />
-      <workItem from="1581684548998" duration="12968000" />
+      <workItem from="1581684548998" duration="18738000" />
     </task>
     <task id="LOCAL-00001" summary="Adding multiple routes to make Moussa happy">
       <created>1581198545084</created>
@@ -293,10 +297,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242589418" />
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581689691945">
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581704259395">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581689691945" />
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581704259395" />
     <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581613149232">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

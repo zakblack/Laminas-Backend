@@ -196,9 +196,9 @@
                 </div>
                 <!-- /.row -->
                 <!-- Main row -->
-                <div class="row">
+
                     <!-- Left col -->
-                    <section class="col-lg-12 connectedSortable">
+                    <section class="connectedSortable">
                         <!-- Custom tabs (Charts with tabs)-->
                         <div class="card">
                             <div class="card-header">
@@ -226,7 +226,7 @@
                                         </td>
                                         <td><?php  echo $joueur->points; ?></td>
                                         <td><?php  echo $joueur->pourcentage_reussite; ?>%</td>
-                                        <td><a href="profile/<?php  echo $joueur->id_u; ?>" >More..</a></td>
+                                        <td><a href="profile?id=<?php  echo $joueur->id_u; ?>" >More..</a></td>
                                     </tr>
                                     <?php endforeach; ?>
                                     </tbody>
@@ -254,7 +254,7 @@
                     <!-- right col (We are only adding the ID to make the widgets sortable)-->
 
                     <!-- right col -->
-                </div>
+
                 <!-- /.row (main row) -->
             </div><!-- /.container-fluid -->
         </section>

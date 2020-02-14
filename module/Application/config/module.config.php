@@ -45,7 +45,7 @@ return [
             'admin' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/admin[/:action]',
+                    'route'    => '/admin[/:action][/:param]',
                     'defaults' => [
                         'controller' => Controller\AdminController::class,
                         'action'     => 'index',

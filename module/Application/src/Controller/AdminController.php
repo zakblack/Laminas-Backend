@@ -12,6 +12,7 @@ namespace Application\Controller;
 
 
 use Application\Entity\Admin;
+use Application\Entity\ConnectionLog;
 use Application\Entity\Game;
 use Application\Entity\GameHistory;
 use Application\Entity\User;
@@ -45,8 +46,33 @@ class AdminController extends AbstractActionController
 
     public function profileAction()
     {
-        $id = $this->params()->fromRoute('id');
-        $user = $this->entityManager->getRepository(User::class)->find($id);
+        if ($id = $this->params()->fromQuery("id") != null )
+        {
+            $p = $this->entityManager->getRepository(User::class)->find($id);
+            $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findAll(["id_u"=>$id]);
+            $joueur=array("id_u"=>$p->getId(),
+                "username"=>$p->getUsername(),
+                "password"=>$p->getPassword(),
+                "nom"=>$p->getNom(),
+                "prenom"=>$p->getPrenom(),
+                "email"=>$p->getEmail(),
+                "date_de_naissance"=>$p->getDateDeNaissance(),
+                "image"=>$p->getImage(),
+                "points"=>$p->getPoints(),
+                "parties_gagnees"=>$p->getPartiesGagnees(),
+                "parties_perdues"=>$p->getPartiesPerdues(),
+                "etat"=>$p->getEtat(),
+                "pourcentage_reussite"=>$p->getPourcentageReussite()
+            );
+            return new ViewModel([
+                "user"=>$joueur,
+                "connectionlog"=>$connexion
+
+            ]);
+        }
+        else {
+            $this->redirect()->toRoute('admin');
+        }
 
     }
 

@@ -98,7 +98,7 @@ class UsersController extends AbstractActionController
         if ($this->verify($this->getRequest())){
             if($this->getRequest()->isGet()){
 
-                $id_player=$this->params()->fromQuery("id");
+                $id_player=$this->params()->fromQuery("id_u");
                 if ($id_player == $this->getID($this->getRequest())) {
                     $player = $this->entityManager->getRepository(User::class)->find($id_player);
                     $joueur=array("id"=>$player->getId(),

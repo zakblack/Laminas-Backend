@@ -88,7 +88,8 @@ class IndexController extends AbstractActionController
         if ($this->verify($this->getRequest())){
 
         $id_u =  $this->params()->fromQuery("id_u");
-        $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findOneBy(["id_u"=>$id_u]);
+        $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findOneBy(array('id_u'=>$id_u),
+            array('connexion' => 'DESC'));
         if (isset($connexion)) {
 
             $player = $this->entityManager->getRepository(User::class)->find($id_u);

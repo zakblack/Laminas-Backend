@@ -36,7 +36,7 @@ class JwtController
             'points' => (int)$user->getPoints(),
             'parties_gagnees' => (int)$user->getPartiesGagnees(),
             'parties_perdues' => (int)$user->getPartiesPerdues(),
-            'pourcentage_reussite' => (int)$user->getPourcentageReussite(),
+            'pourcentage_reussite' => (float)$user->getPourcentageReussite(),
             'etat' => (int)$user->getEtat()
         ]);
 
