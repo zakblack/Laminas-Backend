@@ -100,11 +100,14 @@ class AdminController extends AbstractActionController
                 $nombreparties = $nombreparties + $game->nombre_de_tours;
             }
 
+
+
             return new ViewModel([
                 "joueurs"=>$joueurs,
                 "games_history"=>$games,
                 "games_online"=>$gamesOnline,
-                "nombre_de_tours"=>$nombreparties
+                "nombre_de_tours"=>$nombreparties,
+                "lastlog"=>$admin->getLastLog()
             ]);
             //return new JsonModel(["Hiiiii you are logged"]);
         } else {
@@ -136,6 +139,10 @@ class AdminController extends AbstractActionController
 
                 $identity =$authResult->getIdentity();
                 $this->authenticationService->getStorage()->write($identity);
+
+                $admin = $this->entityManager->getRepository(Admin::class)->find( $identity->getId());
+                $admin->setLastLog(date("Y-m-d H:i:s"));
+                $this->entityManager->flush();
                 return $this->redirect()->toRoute('admin',array(
                     'controller' => 'admin',
                     'action' =>  'home',
