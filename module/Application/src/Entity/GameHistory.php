@@ -44,10 +44,6 @@ class GameHistory
      */
     protected $gagner;
 
-    /**
-     * @ORM\Column(name="temps_passe")
-     */
-    protected $temps_passe;
 
     /**
      * @return mixed
@@ -145,21 +141,7 @@ class GameHistory
         $this->gagner = $gagner;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTempsPasse()
-    {
-        return $this->temps_passe;
-    }
-
-    /**
-     * @param mixed $temps_passe
-     */
-    public function setTempsPasse($temps_passe): void
-    {
-        $this->temps_passe = $temps_passe;
-    }
+    
 
 
 
