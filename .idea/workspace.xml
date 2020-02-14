@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module/Application/src/Entity/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Service/AuthAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Application/src/Service/Factory/AuthenticationServiceFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/abc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/abc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/src/Entity/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Entity/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/view/application/admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/view/application/admin/index.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +76,16 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-paginator" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-authentication" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-module" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-orm-module" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-session" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-authentication" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-crypt" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-math" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XUDtgVPejdegwCryY2TXRmjJqU" />
@@ -91,15 +104,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/module/Application/src/Entity" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Service\Factory" />
+      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Entity" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Factory" />
       <recent name="C:\wamp64\www\api\abc\config\autoload" />
       <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller\Service" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\api\abc\module\Application\src\Controller" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -128,7 +142,7 @@
       <workItem from="1581337552618" duration="4832000" />
       <workItem from="1581432507510" duration="7865000" />
       <workItem from="1581533856961" duration="12065000" />
-      <workItem from="1581612965506" duration="159000" />
+      <workItem from="1581612965506" duration="4604000" />
     </task>
     <task id="LOCAL-00001" summary="Adding multiple routes to make Moussa happy">
       <created>1581198545084</created>
@@ -249,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581608424395</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Always making Moussa happy &#10;like always">
+      <created>1581613153111</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1581613153111</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,34 +292,34 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="423" y="173" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1581241535982" />
-    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1581439443932">
+    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1581613193846">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1581439443932" />
+    <state x="476" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1581613193846" />
     <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581242589418">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="298" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242589418" />
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581538130703">
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581614448507">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581538130703" />
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581611427535">
+    <state x="413" y="125" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1581614448507" />
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2" timestamp="1581613149232">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581611427535" />
+    <state x="308" y="0" width="926" height="738" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1581613149232" />
     <state x="453" y="184" key="NewPhpClassDialog" timestamp="1581242713943">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="453" y="184" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1581242713943" />
-    <state x="517" y="293" key="NewPhpFileDialog" timestamp="1581609292323">
+    <state x="517" y="293" key="NewPhpFileDialog" timestamp="1581616740174">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="517" y="293" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1581609292323" />
-    <state x="275" y="103" key="Vcs.Push.Dialog.v2" timestamp="1581608430287">
+    <state x="517" y="293" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1581616740174" />
+    <state x="275" y="103" key="Vcs.Push.Dialog.v2" timestamp="1581613166640">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581608430287" />
+    <state x="275" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1581613166640" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1581101646292">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

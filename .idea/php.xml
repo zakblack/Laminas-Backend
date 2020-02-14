@@ -47,13 +47,16 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-paginator" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-authentication" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-module" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-orm-module" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-session" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-authentication" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-crypt" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-math" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

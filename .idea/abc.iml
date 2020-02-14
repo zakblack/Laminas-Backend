@@ -23,9 +23,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/persistence" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/reflection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-authentication" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-code" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-component-installer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-crypt" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-db" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-development-mode" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-escaper" />
@@ -38,6 +40,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-inputfilter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-json" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-modulemanager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-mvc" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-router" />
@@ -48,6 +51,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-view" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
@@ -55,7 +59,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/service-contracts" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-authentication" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-paginator" />
     </content>

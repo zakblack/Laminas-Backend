@@ -132,7 +132,7 @@ class UsersController extends AbstractActionController
         if ($this->verify($this->getRequest())){
             if($this->getRequest()->isPost()){
 
-                $id_player=$this->params()->fromPost("id");
+                $id_player=$this->params()->fromQuery("id");
                 if ($id_player == $this->getID($this->getRequest())) {
                     $user = $this->entityManager->getRepository(User::class)->find($id_player);
                     $user->setUsername($this->params()->fromPost("username"));
@@ -210,7 +210,7 @@ class UsersController extends AbstractActionController
         $var=JwtController::deconstructJwt($msg);
         $var=json_encode($var);
         $var=json_decode($var);
-        $var=(int) $var->payload->id;
+        $var=(int) $var->payload->id_u;
         return $var;
     }
 

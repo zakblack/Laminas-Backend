@@ -107,6 +107,13 @@ return [
     'session_containers' => [
         'Administration'
     ],
+    'service_manager' => [
+        'factories' => [
+           \Laminas\Authentication\AuthenticationService::class
+            => Service\Factory\AuthenticationServiceFactory::class,
+
+        ],
+    ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class =>
