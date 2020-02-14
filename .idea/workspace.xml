@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7eaaece-8756-4211-a973-613e81f5f06a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module/Application/src/Service/AuthAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/Application/src/Service/Factory/AuthenticationServiceFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/abc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/abc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/config/module.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/src/Entity/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/src/Entity/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/Application/view/application/admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/view/application/admin/index.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +132,7 @@
       <workItem from="1581337552618" duration="4832000" />
       <workItem from="1581432507510" duration="7865000" />
       <workItem from="1581533856961" duration="12065000" />
-      <workItem from="1581612965506" duration="4604000" />
+      <workItem from="1581612965506" duration="4876000" />
     </task>
     <task id="LOCAL-00001" summary="Adding multiple routes to make Moussa happy">
       <created>1581198545084</created>

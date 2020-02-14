@@ -132,7 +132,7 @@ class UsersController extends AbstractActionController
         if ($this->verify($this->getRequest())){
             if($this->getRequest()->isPost()){
 
-                $id_player=$this->params()->fromQuery("id");
+                $id_player=$this->params()->fromQuery("id_u");
                 if ($id_player == $this->getID($this->getRequest())) {
                     $user = $this->entityManager->getRepository(User::class)->find($id_player);
                     $user->setUsername($this->params()->fromPost("username"));
@@ -141,7 +141,8 @@ class UsersController extends AbstractActionController
                     $user->setPrenom($this->params()->fromPost("prenom"));
                     $user->setEmail($this->params()->fromPost("email"));
                     $user->setDateDeNaissance($this->params()->fromPost("date_de_naissance"));
-                    $user->setPoints($this->params()->fromPost("image"));
+                    $user->setPoints($this->params()->fromPost("points"));
+                    $user->setImage($this->params()->fromPost("image"));
                     $user->setPartiesPerdues($this->params()->fromPost("parties_perdues"));
                     $user->setPartiesGagnees($this->params()->fromPost("parties_gagnees"));
                     $user->setPourcentageReussite($this->params()->fromPost("pourcentage_reussite"));
