@@ -25,7 +25,7 @@ class JwtController
 
         $payload = json_encode([
             'exp' => time(),
-            'id_u' => $user->getId(),
+            'id_u' => (int)$user->getId(),
             'username' => $user->getUsername(),
             'password' => $user->getPassword(),
             'nom' => $user->getNom(),
@@ -33,11 +33,11 @@ class JwtController
             'email' => $user->getEmail(),
             'date_de_naissance' => $user->getDateDeNaissance(),
             'image' => $user->getImage(),
-            'points' => $user->getPoints(),
-            'parties_gagnees' => $user->getPartiesGagnees(),
-            'parties_perdues' => $user->getPartiesPerdues(),
-            'pourcentage_reussite' => $user->getPourcentageReussite(),
-            'etat' => $user->getEtat()
+            'points' => (int)$user->getPoints(),
+            'parties_gagnees' => (int)$user->getPartiesGagnees(),
+            'parties_perdues' => (int)$user->getPartiesPerdues(),
+            'pourcentage_reussite' => (int)$user->getPourcentageReussite(),
+            'etat' => (int)$user->getEtat()
         ]);
 
         $base64Header = JwtController::UrlEncode($header);

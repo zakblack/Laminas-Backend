@@ -43,6 +43,12 @@ class AdminController extends AbstractActionController
         $this->authenticationService = $authenticationService;
     }
 
+    public function profileAction()
+    {
+        $id = $this->params()->fromRoute('id');
+        $user = $this->entityManager->getRepository(User::class)->find($id);
+
+    }
 
     public function homeAction(){
         $admin = $this->authenticationService->getIdentity();

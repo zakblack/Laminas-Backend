@@ -225,8 +225,8 @@
                                         <td><?php  echo $joueur->prenom; ?>
                                         </td>
                                         <td><?php  echo $joueur->points; ?></td>
-                                        <td><?php  echo $joueur->pourcentage_reussite; ?></td>
-                                        <td><?php  echo $joueur->id_u; ?></td>
+                                        <td><?php  echo $joueur->pourcentage_reussite; ?>%</td>
+                                        <td><a href="profile/<?php  echo $joueur->id_u; ?>" >More..</a></td>
                                     </tr>
                                     <?php endforeach; ?>
                                     </tbody>
