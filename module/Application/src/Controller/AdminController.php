@@ -52,7 +52,7 @@ class AdminController extends AbstractActionController
         if ($id_u != null )
         {
             $p = $this->entityManager->getRepository(User::class)->findOneBy(["id"=>$id_u]);
-            $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findBy(["id_u"=>$id_u]);
+            $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findBy(["id_u"=>$id_u],array('connexion' => 'DESC'));
             $player=array("id_u"=>$p->getId(),
                 "username"=>$p->getUsername(),
                 "password"=>$p->getPassword(),
