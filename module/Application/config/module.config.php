@@ -107,13 +107,6 @@ return [
     'session_containers' => [
         'Administration'
     ],
-    'service_manager' => [
-        'factories' => [
-           \Laminas\Authentication\AuthenticationService::class
-            => Service\Factory\AuthenticationServiceFactory::class,
-
-        ],
-    ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class =>
@@ -163,6 +156,16 @@ return [
                     __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver'
                 ]
             ]
-        ]
+        ],
+        'authentication' => [
+            'orm_default' => [
+                'object_manager' => 'Doctrine\ORM\EntityManager',
+                'identity_class' => 'Application\Entity\Admin',
+                'identity_property' => 'username',
+                'credential_property' => 'password',
+                'credential_callable' => 'Application\Controller\AdminController::verifyCredential',
+            ],
+        ],
     ],
+
 ];

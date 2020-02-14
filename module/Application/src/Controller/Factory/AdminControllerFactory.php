@@ -17,9 +17,10 @@ class AdminControllerFactory implements FactoryInterface
                              $requestedName, array $options = null)
     {
         $entityManager = $container->get('doctrine.entitymanager.orm_default');
-        $sessionManager = $container->get(SessionManager::class);
+        $authenticationService = $container->get('doctrine.authenticationservice.orm_default');
+
 
         // Instantiate the controller and inject dependencies
-        return new AdminController($entityManager, $sessionManager);
+        return new AdminController($entityManager, $authenticationService);
     }
 }

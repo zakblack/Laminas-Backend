@@ -64,6 +64,7 @@ class IndexController extends AbstractActionController
                 "username" => $player->getUsername()
             );
             $token = JWT::encode($payload, $key);**/
+            $player->setEtat(1);
             $connexion = new ConnectionLog();
             $connexion->setIdU($player->getId());
             $connexion->setConnexion(date("Y-m-d H:i:s"));
@@ -90,6 +91,8 @@ class IndexController extends AbstractActionController
         $connexion = $this->entityManager->getRepository(ConnectionLog::class)->findOneBy(["id_u"=>$id_u]);
         if (isset($connexion)) {
 
+            $player = $this->entityManager->getRepository(User::class)->find($id_u);
+            $player->setEtat(0);
             $connexion->setDeconnexion(date("Y-m-d H:i:s"));
             $this->entityManager->flush();
             $this->getResponse()->setStatusCode(200);
@@ -142,11 +145,19 @@ class IndexController extends AbstractActionController
 
     }**/
 
-    public function verifyAction(){
-        $msg = $this->getRequest()->getHeaders();
+    private function verify($request){
+        $requete = $request->getHeaders()->get('authorization');
 
-        return new JsonModel([var_dump($msg->get('authorization')->value)]);
-        //return new JsonModel([$msg->authorization()]);
+        if ($requete == null){
+
+            return false;
+        }
+        else {
+            $msg = $request->getHeaders()->get('authorization')->getFieldValue();
+            $msg = str_replace("Bearer ", "", $msg);
+            return JwtController::verifyJwt($msg);
+        }
+
     }
 
 }
