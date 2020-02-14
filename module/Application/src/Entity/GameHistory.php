@@ -141,7 +141,7 @@ class GameHistory
         $this->gagner = $gagner;
     }
 
-    
+
 
 
 

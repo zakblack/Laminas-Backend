@@ -61,6 +61,7 @@ class RegisterController extends AbstractActionController
             $user->setPartiesGagnees(0);
             $user->setPourcentageReussite(0);
             $user->setImage("avatar.png");
+            $user->setEtat(0);
             $this->entityManager->persist($user);
             $this->entityManager->flush();
 
