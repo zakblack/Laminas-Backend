@@ -78,6 +78,12 @@ class RegisterController extends AbstractActionController
 
     }
 
+    public function notFoundAction()
+    {
+        $this->getResponse()->setStatusCode(404);
+        return new JsonModel();
+    }
+
     public function emailAction(){
         $email = $this->params()->fromQuery("email");
         $player = $this->entityManager->getRepository(User::class)->findOneBy(["email"=>$email]);

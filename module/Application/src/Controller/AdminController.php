@@ -226,10 +226,10 @@ $this->redirect()->toRoute('admin');
 
     }}
 
-    public function authAction(){
-
-
-
+    public function notFoundAction()
+    {
+        $this->getResponse()->setStatusCode(404);
+        return new JsonModel();
     }
 
 

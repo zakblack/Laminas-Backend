@@ -83,6 +83,12 @@ class IndexController extends AbstractActionController
     }
 
 
+    public function notFoundAction()
+    {
+        $this->getResponse()->setStatusCode(404);
+        return new JsonModel();
+    }
+
     public function logoutAction()
     {
         if ($this->verify($this->getRequest())){

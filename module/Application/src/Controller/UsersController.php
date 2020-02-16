@@ -93,6 +93,12 @@ class UsersController extends AbstractActionController
         return new JsonModel([$this->verify($this->getRequest())]);
     }
 
+    public function notFoundAction()
+    {
+        $this->getResponse()->setStatusCode(404);
+        return new JsonModel();
+    }
+
     public function profileAction()
     {
         if ($this->verify($this->getRequest())){

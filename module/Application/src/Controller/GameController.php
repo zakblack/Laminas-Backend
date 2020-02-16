@@ -209,5 +209,11 @@ class GameController extends AbstractActionController
     }
 
 
+    public function notFoundAction()
+    {
+        $this->getResponse()->setStatusCode(404);
+        return new JsonModel();
+    }
+
 
 }
