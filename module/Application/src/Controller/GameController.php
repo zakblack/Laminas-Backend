@@ -124,7 +124,7 @@ class GameController extends AbstractActionController
     public function addTourAction()
     {
         if ($this->verify($this->getRequest())){
-            if($this->getRequest()->isPut()){
+            if($this->getRequest()->isPost()){
                 $room=$this->params()->fromQuery("room");
                 $game = $this->entityManager->getRepository(Game::class)->findOneBy(["room"=>$room]);
                 if (isset($game)){
@@ -157,7 +157,7 @@ class GameController extends AbstractActionController
 
     public function endAction(){
         if ($this->verify($this->getRequest())){
-            if($this->getRequest()->isDelete()){
+            if($this->getRequest()->isGet()){
 
                 $roomid=$this->params()->fromQuery("room");
 
